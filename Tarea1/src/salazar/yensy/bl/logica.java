@@ -33,14 +33,14 @@ public class logica {
                 }
                 output.println("Nombre del dueño de la mascota: ");
                 String duenoNombre = input.next();
-                output.println("Ranking de estrellas de la mascota: ");
-                int ranking = input.nextInt();
+                output.println("Ranking de estrellas de la mascota: 1/2/3 estrellas");
+                String ranking = input.next();
                 output.println("Observaciones: ");
                 String observaciones = input.next();
                 output.println("Foto de la mascota: ");
                 String foto = input.next();
-                Mascotas nueva = new Mascotas(nombrePet, duenoNombre, ranking, observaciones, foto);
-                arregloDeMascotas[nextPosicion++]=nueva;
+                Mascotas nuevaMascota = new Mascotas(nombrePet, duenoNombre, ranking, observaciones, foto);
+                arregloDeMascotas[nextPosicion++]=nuevaMascota;
                 break;
             case 2:
                 output.println("Nombre y apellidos de la persona: ");
@@ -60,8 +60,8 @@ public class logica {
                 String roll = input.next();
                 output.println("Estado del usuario: Activo o Inactivo ");
                 String estado = input.next();
-                Persona nueva = new Persona(nombre, cedula, telefono, direccion, roll, estado);
-                arregloDePersonas[nextPosicion++]=nueva;
+                Persona nuevaPersona = new Persona(nombre, cedula, telefono, direccion, roll, estado);
+                arregloDePersonas[nextPosicion++]=nuevaPersona;
                 break;
             case 3:
                 output.println("Lista de mascotas de la veterinaria: ");
@@ -78,8 +78,8 @@ public class logica {
                 String horaCita = input.next();
                 output.println("Asunto de la cita: ");
                 String observacionesCita = input.next();
-                CitasVet nueva = new CitasVet(nombrePet, fechaCita, horaCita, observacionesCita);
-                arregloCitasVeterinaria[nextPosicion++]=nueva;
+                CitasVet nuevaCita = new CitasVet(nombrePet, fechaCita, horaCita, observacionesCita);
+                arregloCitasVeterinaria[nextPosicion++]=nuevaCita;
                 break;
             case 5:
                 output.println("Nombre de la mascota ");
@@ -88,10 +88,10 @@ public class logica {
                 String fechaEntrada = input.next();
                 output.println("Fecha de salida / Check out: ");
                 String fechaSalida = input.next();
-                ReservaHotel nueva = new ReservaHotel(nombrePet, fechaEntrada, fechaSalida);
-                arregloReservasHotel[nextPosicion++]=nueva;
+                ReservaHotel nuevaReserva = new ReservaHotel(nombrePet, fechaEntrada, fechaSalida);
+                arregloReservasHotel[nextPosicion++]=nuevaReserva;
                 break;
-            case 5:
+            case 6:
                 break;
             default:
                 output.println("Opción desconocida");
@@ -100,3 +100,4 @@ public class logica {
     }
 
 }
+
